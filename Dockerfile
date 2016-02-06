@@ -19,6 +19,9 @@ RUN mkdir /scripts/pre-exec.d && \
 mkdir /scripts/pre-init.d && \
 chmod -R 755 /scripts
 
+# Your app
+ADD app/index.php /app/index.php
+
 EXPOSE 8080
 
 # VOLUME /app
