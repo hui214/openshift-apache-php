@@ -17,7 +17,7 @@ oc new-project openshift-apache-php \
 Deploy
 
 ```sh
-oc new-app https://github.com/ure/openshift-apache-php.git -n php-webserver
+oc new-app https://github.com/ure/openshift-apache-php.git --name php-webserver
 ```
 
 #### Route.yml
