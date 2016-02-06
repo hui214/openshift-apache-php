@@ -6,4 +6,4 @@ spec:
   host: www.myapache-phpsite.com
   to:
     kind: Service
-    name: openshift-apache-php
+    name: php-webserver

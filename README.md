@@ -6,7 +6,7 @@ Template for running a apache php on a container based on alpine linux/openshift
 
 You need oc (https://github.com/openshift/origin/releases) localy installed:
 
-create a new project
+create a new project (change to your whishes)
 
 ```sh
 oc new-project openshift-apache-php \
@@ -17,7 +17,7 @@ oc new-project openshift-apache-php \
 Deploy
 
 ```sh
-oc new-app https://github.com/ure/openshift-apache-php.git
+oc new-app https://github.com/ure/openshift-apache-php.git -n php-webserver
 ```
 
 #### Route.yml
