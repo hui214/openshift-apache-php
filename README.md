@@ -4,9 +4,9 @@ Template for running a apache php on a container based on alpine linux/openshift
 
 ### Installation
 
-You need oc (https://github.com/openshift/origin/releases) localy installed:
+You need oc (https://github.com/openshift/origin/releases) locally installed:
 
-create a new project (change to your whishes)
+create a new project (change to your whishes) or add to your existing project
 
 ```sh
 oc new-project openshift-apache-php \
