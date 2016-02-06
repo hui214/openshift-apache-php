@@ -22,7 +22,7 @@ oc new-app https://github.com/ure/openshift-apache-php.git -n php-webserver
 
 #### Route.yml
 
-Create routes for sites to be proxied
+Create route for develoment and testing
 
 ```sh
 curl https://raw.githubusercontent.com/ure/openshift-apache-php/master/Route.yaml | oc create -f -
