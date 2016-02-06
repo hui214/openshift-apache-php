@@ -11,7 +11,7 @@ create a new project
 ```sh
 oc new-project openshift-apache-php \
     --description="WebServer - Apache PHP" \
-    --display-name="Alpine Apache PHP"
+    --display-name="Apache PHP"
 ```
 
 Deploy
