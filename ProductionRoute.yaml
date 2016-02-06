@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Route
+metadata:
+  name: www.myapache-phpsite.com
+spec:
+  host: www.myapache-phpsite.com
+  to:
+    kind: Service
+    name: openshift-apache-php
