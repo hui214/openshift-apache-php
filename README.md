@@ -25,5 +25,5 @@ oc new-app https://github.com/ure/openshift-apache-php.git
 Create routes for sites to be proxied
 
 ```sh
-oc create -f Route.yaml
+curl https://raw.githubusercontent.com/ure/openshift-apache-php/master/Route.yaml | oc create -f -
 ```
