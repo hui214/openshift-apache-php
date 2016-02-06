@@ -14,23 +14,10 @@ oc new-project openshift-apache-php \
     --display-name="Alpine Apache PHP"
 ```
 
-Clone the repository
-```sh
-git clone https://github.com/ure/openshift-apache-php.git
-cd openshift-apache-php
-```
-
-Create the BuildConfig and DeploymentConfig
-
-```sh
-oc create -f BuildConfig.yaml
-oc create -f DeploymentConfig.yaml
-```
-
 Deploy
 
 ```sh
-oc new-app https://github.com/ure/openshift-alpine-apache-php.git
+oc new-app https://github.com/ure/openshift-apache-php.git
 ```
 
 #### Route.yml
