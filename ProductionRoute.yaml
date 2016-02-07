@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Route
 metadata:
-  name: www.myapache-phpsite.com
+  name: www.myapache-site.com
 spec:
-  host: www.myapache-phpsite.com
+  host: www.myapache-site.com
   to:
     kind: Service
-    name: php-webserver
+    name: apache-php
