@@ -34,7 +34,7 @@ spec:
 ```
 use in your Dockerfile
 ```sh
-FROM weepee-registry/apache-php
+FROM weepee-registry/php-webserver
 
 # Your app
 ADD app /app
