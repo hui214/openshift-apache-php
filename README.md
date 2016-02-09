@@ -28,13 +28,13 @@ spec:
     dockerStrategy:
       from:
         kind: ImageStreamTag
-        name: apache-php:latest
+        name: php-webserver:latest
         namespace: weepee-registry
     type: Docker
 ```
 use in your Dockerfile
 ```sh
-FROM weepee-registry/apache-php
+FROM weepee-registry/php-webserver
 
 # Your app
 ADD app /app
