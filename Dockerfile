@@ -1,7 +1,7 @@
 FROM gliderlabs/alpine
 MAINTAINER Joeri van Dooren <ure@mororless.be>
 
-RUN apk --update add php-apache2 curl php-cli php-json php-phar php-openssl php-pgsql php-mysql php-gd php-gd php-exif php-iconv php-json php-dom php-ftp php-xml php-openssl php-xmlreader php-sockets php-zlib php-zip php-mcrypt php-iconv ssmtp nodejs git mysql-client php-curl php-pdo php-pdo_mysql php-pdo_pgsql && rm -f /var/cache/apk/* && \
+RUN apk --update add php-zmq php-suhosin php-xmlrpc php-zip php-xmlreader php-wddx php-pdo_dblib php-xsl php-zlib php-xml php-mssql php-opcache php-pspell php-pdo_mysql php-sysvsem php-pdo_odbc php-pgsql php-sysvmsg php-phar php-pdo_sqlite php-posix php-pdo_pgsql php-sqlite3 php-shmop php-soap php-snmp php-sockets php-sysvshm php-gmp php-pdo php-imap php-gd php-openssl php-json php-intl php-ldap php-mysql php-mcrypt php-gettext php-iconv php-pcntl php-mysqli php-odbc php-apache2 php-ctype php-dba php-fpm php-dom php-exif php-phpdbg curl ssmtp nodejs git mysql-client && rm -f /var/cache/apk/* && \
 
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
 mkdir /app && chown -R apache:apache /app && \
