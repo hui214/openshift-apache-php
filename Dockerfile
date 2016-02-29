@@ -1,7 +1,7 @@
 FROM gliderlabs/alpine
 MAINTAINER Joeri van Dooren <ure@mororless.be>
 
-RUN apk --update add php-apache2 curl php-cli php-json php-phar php-openssl php-pgsql php-mysql php-gd php-gd php-exif php-iconv php-json php-dom php-ftp php-xml php-openssl php-xmlreader php-sockets php-zlib php-zip php-mcrypt php-iconv ssmtp nodejs git mysql-client php-curl && rm -f /var/cache/apk/* && \
+RUN apk --update add php-apache2 curl php-cli php-json php-phar php-openssl php-pgsql php-mysql php-gd php-gd php-exif php-iconv php-json php-dom php-ftp php-xml php-openssl php-xmlreader php-sockets php-zlib php-zip php-mcrypt php-iconv ssmtp nodejs git mysql-client php-curl php-pdo php-pdo_mysql php-pdo_pgsql && rm -f /var/cache/apk/* && \
 
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
 mkdir /app && chown -R apache:apache /app && \
