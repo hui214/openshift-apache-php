@@ -12,9 +12,11 @@ do
 	fi
 done
 
+echo "oc:x:`id -u`:0:oc:/:/sbin/nologin" >> /etc/passwd
+
 # set apache as owner/group
 if [ "$FIX_OWNERSHIP" != "" ]; then
-	chown -R apache:apache /app
+	chown -R 1000060000:0 /app
 fi
 
 # execute any pre-exec scripts, useful for images
@@ -26,8 +28,6 @@ do
 		. "${i}"
 	fi
 done
-
-echo "openshift-wordpress:x:`id -u`:0:openshift-wordpress:/:/sbin/nologin" >> /etc/passwd
 
 echo "[${STAMP}] Starting daemon..."
 # run apache httpd daemon
