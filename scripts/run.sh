@@ -29,6 +29,11 @@ do
 	fi
 done
 
+if [ -f /build/run.sh ]; then
+   echo "Running /build/run.sh"
+	 /build/run.sh
+fi
+
 echo "[${STAMP}] Starting daemon..."
 # run apache httpd daemon
 httpd -D FOREGROUND
