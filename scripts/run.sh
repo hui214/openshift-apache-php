@@ -16,7 +16,7 @@ echo "oc:x:`id -u`:0:oc:/:/sbin/nologin" >> /etc/passwd
 
 # set apache as owner/group
 if [ "$FIX_OWNERSHIP" != "" ]; then
-	chown -R 1000060000:0 /app
+	chown -R `id -u`:0 /app
 fi
 
 # execute any pre-exec scripts, useful for images
