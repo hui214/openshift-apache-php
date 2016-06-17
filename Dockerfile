@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.3
 MAINTAINER Joeri van Dooren <ure@mororless.be>
 
 RUN apk --no-cache add --update tar rsync openssl python ca-certificates ssmtp nodejs git mysql-client openssh-client && update-ca-certificates && \
