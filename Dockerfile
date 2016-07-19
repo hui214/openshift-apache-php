@@ -2,7 +2,8 @@ FROM alpine:3.4
 MAINTAINER Joeri van Dooren <ure@mororless.be>
 
 RUN apk --no-cache add --update tar rsync openssl python ca-certificates ssmtp nodejs git mysql-client openssh-client && update-ca-certificates && \
-apk --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted --update add  php-xmlrpc php-zip php-xmlreader php-wddx php-pdo_dblib php-xsl php-zlib php-xml php-mssql php-opcache php-pspell php-pdo_mysql php-sysvsem php-pdo_odbc php-pgsql php-sysvmsg php-phar php-pdo_sqlite php-posix php-pdo_pgsql php-curl php-sqlite3 php-shmop php-soap php-snmp php-sockets php-sysvshm php-gmp php-pdo php-imap php-gd php-openssl php-json php-intl php-ldap php-mysql php-mcrypt php-gettext php-iconv php-pcntl php-mysqli php-odbc php-apache2 php-ctype php-dba php-fpm php-dom php-exif php-phpdbg phpredis && rm -f /var/cache/apk/* && \
+    php5 php5-xmlrpc php5-zip php5-xmlreader php5-wddx php5-pdo_dblib php5-xsl php5-zlib php5-xml php5-mssql php5-opcache php5-pspell php5-pdo_mysql php5-sysvsem php5-pdo_odbc php5-pgsql php5-sysvmsg php5-phar php5-pdo_sqlite php5-posix php5-pdo_pgsql php5-curl php5-sqlite3 php5-shmop php5-soap php5-snmp php5-sockets php5-sysvshm php5-gmp php5-pdo php5-imap php5-gd php5-openssl php5-json php5-intl php5-ldap php5-mysql php5-mcrypt php5-gettext php5-iconv php5-pcntl php5-mysqli php5-odbc php5-apache2 php5-ctype php5-dba php5-fpm php5-dom php5-exif php5-phpdbg phpredis && rm -f /var/cache/apk/* && \
+apk --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted --update add php5-redis
 
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
 mkdir /app && chmod a+rwx /app && \
